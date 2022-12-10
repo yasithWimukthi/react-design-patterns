@@ -18,6 +18,7 @@ import {ControlledForm} from "./ControlledForm";
 import {ControlledModal} from "./ControlledModal";
 import {useState} from "react";
 import {UncontrolledOnboardingFlow} from "./UncontrolledOnboardingFlow";
+import {printProps} from "./printProps";
 
 
 const LeftHandComponent = () => {
@@ -92,6 +93,7 @@ const StepThree = ({ goToNext }) => (
     </>
 );
 
+const UserInfoWrapped = printProps(UserInfo);
 
 function App() {
     const [shouldShowModal, setShouldShowModal] = useState(false);
@@ -173,6 +175,8 @@ function App() {
                 <StepTwo />
                 <StepThree />
             </UncontrolledOnboardingFlow>
+
+            <UserInfoWrapped a={1} b="Hello" c={{ name: 'Shaun' }} />
         </>
 
     );
