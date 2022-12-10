@@ -15,6 +15,8 @@ import {ProductInfo} from "./ProductInfo";
 import {DataSource} from "./DataSource";
 import {UncontrolledForm} from "./UncontrolledForm";
 import {ControlledForm} from "./ControlledForm";
+import {ControlledModal} from "./ControlledModal";
+import {useState} from "react";
 
 
 const LeftHandComponent = () => {
@@ -71,6 +73,7 @@ const getLocalStorageData = key => () => {
 const Text = ({ message }) => <h1>{message}</h1>;
 
 function App() {
+    const [shouldShowModal, setShouldShowModal] = useState(false);
     return (
         // <>
         //     <SplitScreen
@@ -127,6 +130,19 @@ function App() {
 
             <UncontrolledForm />
             <ControlledForm />
+
+
+            <>
+                <ControlledModal
+                    shouldShow={shouldShowModal}
+                    onRequestClose={() => setShouldShowModal(false)}
+                >
+                    <h1>Hello!</h1>
+                </ControlledModal>
+                <button onClick={() => setShouldShowModal(!shouldShowModal)}>
+                    {shouldShowModal ? 'Hide Modal' : 'Show Modal'}
+                </button>
+            </>
         </>
 
     );
