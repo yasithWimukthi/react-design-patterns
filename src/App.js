@@ -20,7 +20,7 @@ import {useState} from "react";
 import {UncontrolledOnboardingFlow} from "./UncontrolledOnboardingFlow";
 import {printProps} from "./printProps";
 import {withUser} from "./withUser";
-import {UserInfoForm} from "../UserInfoForm";
+import {UserInfoForm} from "./UserInfoForm";
 
 
 const LeftHandComponent = () => {
