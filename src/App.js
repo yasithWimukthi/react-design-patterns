@@ -9,6 +9,8 @@ import {Modal} from "./Modal";
 import {CurrentUserLoader} from "./CurrentUserLoader";
 import {UserInfo} from "./UserInfo";
 import {UserLoader} from "./UserLoader";
+import {ResourceLoader} from "./ResourceLoader";
+import {ProductInfo} from "./ProductInfo";
 
 
 const LeftHandComponent = () => {
@@ -95,6 +97,12 @@ function App() {
             <UserLoader userId="345">
                 <UserInfo />
             </UserLoader>
+            <ResourceLoader resourceUrl="/users/123" resourceName="user">
+                <UserInfo />
+            </ResourceLoader>
+            <ResourceLoader resourceUrl="/products/1234" resourceName="product">
+                <ProductInfo />
+            </ResourceLoader>
         </>
 
     );
