@@ -19,7 +19,7 @@ import {ControlledModal} from "./ControlledModal";
 import {useState} from "react";
 import {UncontrolledOnboardingFlow} from "./UncontrolledOnboardingFlow";
 import {printProps} from "./printProps";
-import {withUser} from "./withUser";
+import {withUser} from "./hoc/withUser";
 import {UserInfoForm} from "./UserInfoForm";
 
 
