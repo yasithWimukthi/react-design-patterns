@@ -20,6 +20,7 @@ import {useState} from "react";
 import {UncontrolledOnboardingFlow} from "./UncontrolledOnboardingFlow";
 import {printProps} from "./printProps";
 import {withUser} from "./withUser";
+import {UserInfoForm} from "../UserInfoForm";
 
 
 const LeftHandComponent = () => {
@@ -182,6 +183,8 @@ function App() {
             <UserInfoWrapped a={1} b="Hello" c={{ name: 'Shaun' }} />
 
             <UserInfoWithLoader />
+
+            <UserInfoForm />
         </>
 
     );
