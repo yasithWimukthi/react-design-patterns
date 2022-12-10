@@ -1,4 +1,4 @@
-import { withEditableUser } from "./withEditableUser";
+import { withEditableUser } from "./hoc/withEditableUser";
 
 export const UserInfoForm = withEditableUser(({ user, onChangeUser, onSaveUser, onResetUser }) => {
     const { name, age, hairColor } = user || {};
