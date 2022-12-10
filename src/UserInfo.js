@@ -18,7 +18,7 @@
 // 	) : <p>Loading...</p>;
 // }
 
-import { useUser } from './useUser';
+import { useUser } from './hooks/useUser';
 
 export const UserInfo = ({ userId }) => {
 	const user = useUser(userId);
