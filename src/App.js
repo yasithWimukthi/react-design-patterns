@@ -2,6 +2,9 @@ import {SplitScreen} from './SplitScreen';
 import {LargePersonListItem} from "./people/LargePersonListItem";
 import {SmallPersonListItem} from "./people/SmallPersonListItem";
 import {RegularList} from "./RegularList";
+import {SmallProductListItem} from "./products/SmallProductListItem";
+import {NumberedList} from "./NumberedList";
+import {LargeProductListItem} from "./products/LargeProductListItem";
 
 
 const LeftHandComponent = () => {
@@ -62,6 +65,14 @@ function App() {
                     items={people}
                     resourceName="person"
                     itemComponent={LargePersonListItem}/>
+                <RegularList
+                    items={products}
+                    resourceName="product"
+                    itemComponent={SmallProductListItem} />
+                <NumberedList
+                    items={products}
+                    resourceName="product"
+                    itemComponent={LargeProductListItem} />
             </>
         </>
     );
