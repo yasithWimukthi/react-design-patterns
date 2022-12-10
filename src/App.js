@@ -13,6 +13,7 @@ import {UserLoader} from "./UserLoader";
 import {ResourceLoader} from "./ResourceLoader";
 import {ProductInfo} from "./ProductInfo";
 import {DataSource} from "./DataSource";
+import {UncontrolledForm} from "./UncontrolledForm";
 
 
 const LeftHandComponent = () => {
@@ -122,6 +123,8 @@ function App() {
             <DataSource getDataFunc={getLocalStorageData('message')} resourceName="message">
                 <Text />
             </DataSource>
+
+            <UncontrolledForm />
         </>
 
     );
