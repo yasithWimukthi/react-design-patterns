@@ -6,6 +6,8 @@ import {SmallProductListItem} from "./products/SmallProductListItem";
 import {NumberedList} from "./NumberedList";
 import {LargeProductListItem} from "./products/LargeProductListItem";
 import {Modal} from "./Modal";
+import {CurrentUserLoader} from "./CurrentUserLoader";
+import {UserInfo} from "./UserInfo";
 
 
 const LeftHandComponent = () => {
@@ -52,36 +54,39 @@ const products = [{
 
 function App() {
     return (
-        <>
-            <SplitScreen
-                left={LeftHandComponent}
-                right={RightHandComponent}/>
-
-            <>
-                <RegularList
-                    items={people}
-                    resourceName="person"
-                    itemComponent={SmallPersonListItem}/>
-                <RegularList
-                    items={people}
-                    resourceName="person"
-                    itemComponent={LargePersonListItem}/>
-                <RegularList
-                    items={products}
-                    resourceName="product"
-                    itemComponent={SmallProductListItem} />
-                <NumberedList
-                    items={products}
-                    resourceName="product"
-                    itemComponent={LargeProductListItem} />
-            </>
-
-            <>
-                <Modal>
-                    <LargeProductListItem product={products[0]} />
-                </Modal>
-            </>
-        </>
+        // <>
+        //     <SplitScreen
+        //         left={LeftHandComponent}
+        //         right={RightHandComponent}/>
+        //
+        //     <>
+        //         <RegularList
+        //             items={people}
+        //             resourceName="person"
+        //             itemComponent={SmallPersonListItem}/>
+        //         <RegularList
+        //             items={people}
+        //             resourceName="person"
+        //             itemComponent={LargePersonListItem}/>
+        //         <RegularList
+        //             items={products}
+        //             resourceName="product"
+        //             itemComponent={SmallProductListItem} />
+        //         <NumberedList
+        //             items={products}
+        //             resourceName="product"
+        //             itemComponent={LargeProductListItem} />
+        //     </>
+        //
+        //     <>
+        //         <Modal>
+        //             <LargeProductListItem product={products[0]} />
+        //         </Modal>
+        //     </>
+        // </>
+        <CurrentUserLoader>
+            <UserInfo />
+        </CurrentUserLoader>
     );
 }
 
