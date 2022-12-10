@@ -7,10 +7,12 @@ import {NumberedList} from "./NumberedList";
 import {LargeProductListItem} from "./products/LargeProductListItem";
 import {Modal} from "./Modal";
 import {CurrentUserLoader} from "./CurrentUserLoader";
+import axios from 'axios';
 import {UserInfo} from "./UserInfo";
 import {UserLoader} from "./UserLoader";
 import {ResourceLoader} from "./ResourceLoader";
 import {ProductInfo} from "./ProductInfo";
+import {DataSource} from "./DataSource";
 
 
 const LeftHandComponent = () => {
@@ -54,6 +56,11 @@ const products = [{
     description: 'State-of-the-art technology for optimum running',
     rating: 4.2,
 }];
+
+const getServerData = url => async () => {
+    const response = await axios.get(url);
+    return response.data;
+}
 
 function App() {
     return (
@@ -103,6 +110,9 @@ function App() {
             <ResourceLoader resourceUrl="/products/1234" resourceName="product">
                 <ProductInfo />
             </ResourceLoader>
+            <DataSource getDataFunc={getServerData('/users/123')} resourceName="user">
+                <UserInfo />
+            </DataSource>
         </>
 
     );
