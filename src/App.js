@@ -5,6 +5,7 @@ import {RegularList} from "./RegularList";
 import {SmallProductListItem} from "./products/SmallProductListItem";
 import {NumberedList} from "./NumberedList";
 import {LargeProductListItem} from "./products/LargeProductListItem";
+import {Modal} from "./Modal";
 
 
 const LeftHandComponent = () => {
@@ -73,6 +74,12 @@ function App() {
                     items={products}
                     resourceName="product"
                     itemComponent={LargeProductListItem} />
+            </>
+
+            <>
+                <Modal>
+                    <LargeProductListItem product={products[0]} />
+                </Modal>
             </>
         </>
     );
