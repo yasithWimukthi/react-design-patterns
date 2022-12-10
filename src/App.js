@@ -8,6 +8,7 @@ import {LargeProductListItem} from "./products/LargeProductListItem";
 import {Modal} from "./Modal";
 import {CurrentUserLoader} from "./CurrentUserLoader";
 import {UserInfo} from "./UserInfo";
+import {UserLoader} from "./UserLoader";
 
 
 const LeftHandComponent = () => {
@@ -84,9 +85,18 @@ function App() {
         //         </Modal>
         //     </>
         // </>
-        <CurrentUserLoader>
-            <UserInfo />
-        </CurrentUserLoader>
+        <>
+            <UserLoader userId="123">
+                <UserInfo />
+            </UserLoader>
+            <UserLoader userId="234">
+                <UserInfo />
+            </UserLoader>
+            <UserLoader userId="345">
+                <UserInfo />
+            </UserLoader>
+        </>
+
     );
 }
 
