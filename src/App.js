@@ -14,6 +14,7 @@ import {ResourceLoader} from "./ResourceLoader";
 import {ProductInfo} from "./ProductInfo";
 import {DataSource} from "./DataSource";
 import {UncontrolledForm} from "./UncontrolledForm";
+import {ControlledForm} from "./ControlledForm";
 
 
 const LeftHandComponent = () => {
@@ -125,6 +126,7 @@ function App() {
             </DataSource>
 
             <UncontrolledForm />
+            <ControlledForm />
         </>
 
     );
